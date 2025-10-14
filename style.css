@@ -13,22 +13,11 @@ h1, h2, h3, h4 {
   padding-bottom: 0.3em;
 }
 
-h1 {
-  font-size: 2em;
-  margin-top: 1em;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-top: 1.2em;
-}
-
 a {
   color: #74f5a1;
   text-decoration: none;
   border-bottom: 1px dotted #74f5a1;
 }
-
 a:hover {
   color: #c0ffc8;
   border-bottom: 1px solid #c0ffc8;
@@ -41,17 +30,38 @@ blockquote {
   background: #111;
 }
 
+/* ===== 改良版テーブルデザイン ===== */
 table {
   border-collapse: collapse;
   width: 100%;
-  margin: 1em 0;
-  background: #111;
+  margin: 1.5em 0;
+  background: #141414;              /* 表全体の背景を暗めに */
+  border: 1px solid #222;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-th, td {
-  border: 1px solid #444;
-  padding: 0.6em;
+th {
+  background: linear-gradient(180deg, #1b1b1b 0%, #121212 100%);
+  color: #74f5a1;
+  font-weight: 600;
   text-align: left;
+  padding: 0.8em 1em;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+td {
+  color: #e4e4e4;
+  padding: 0.8em 1em;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+tr:nth-child(even) td {
+  background: #181818;              /* 偶数行に薄いグレーの縞 */
+}
+
+tr:hover td {
+  background: #202820;              /* ホバーでわずかに緑がかる */
 }
 
 code {
