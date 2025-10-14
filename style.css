@@ -1,99 +1,161 @@
+/* ======== MeKaBu Acrylic Dark Blue Theme ======== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Noto+Sans+JP:wght@400;600&display=swap');
+
 body {
   font-family: "Inter", "Noto Sans JP", sans-serif;
-  background: #0a0a0a;
-  color: #d8d8d8;
+  background: radial-gradient(circle at top left, #0b1118 0%, #06090f 100%);
+  color: #dce4f5;
   line-height: 1.8;
-  padding: 2em 10%;
+  padding: 3em 10%;
+  backdrop-filter: blur(4px);
+  -webkit-font-smoothing: antialiased;
 }
 
+/* ===== 見出し ===== */
 h1, h2, h3, h4 {
-  color: #80ffb4;
-  text-shadow: 0 0 4px #2aff80;
-  border-bottom: 1px solid #333;
+  color: #8fd1ff;
+  text-shadow: 0 0 8px rgba(120,200,255,0.4);
+  border-bottom: 1px solid rgba(90,150,220,0.3);
   padding-bottom: 0.3em;
 }
 
+h1 {
+  font-size: 2.2em;
+  margin-top: 1em;
+}
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.2em;
+}
+h3 {
+  font-size: 1.3em;
+  color: #a8d8ff;
+}
+
+/* ===== リンク ===== */
 a {
-  color: #74f5a1;
+  color: #9cd3ff;
   text-decoration: none;
-  border-bottom: 1px dotted #74f5a1;
+  border-bottom: 1px dotted rgba(156,211,255,0.5);
+  transition: all 0.2s ease;
 }
 a:hover {
-  color: #c0ffc8;
-  border-bottom: 1px solid #c0ffc8;
+  color: #d8f0ff;
+  border-bottom: 1px solid rgba(156,211,255,0.8);
+  text-shadow: 0 0 4px rgba(156,211,255,0.6);
 }
 
+/* ===== 引用 ===== */
 blockquote {
-  border-left: 4px solid #74f5a1;
+  border-left: 4px solid rgba(140,190,255,0.4);
   padding-left: 1em;
-  color: #b8ffcc;
-  background: #111;
+  color: #cbe3ff;
+  background: rgba(10,20,40,0.3);
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
 }
 
-/* ===== 改良版テーブルデザイン ===== */
+/* ===== 表 (アクリル風) ===== */
 table {
   border-collapse: collapse;
   width: 100%;
   margin: 1.5em 0;
-  background: #141414;              /* 表全体の背景を暗めに */
-  border: 1px solid #222;
-  border-radius: 6px;
+  background: rgba(20, 40, 70, 0.3);
+  border: 1px solid rgba(120,150,255,0.2);
+  border-radius: 8px;
   overflow: hidden;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(80,120,255,0.05);
 }
 
 th {
-  background: linear-gradient(180deg, #1b1b1b 0%, #121212 100%);
-  color: #74f5a1;
+  background: rgba(30,60,90,0.6);
+  color: #b0ddff;
   font-weight: 600;
   text-align: left;
   padding: 0.8em 1em;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid rgba(100,150,255,0.15);
+  backdrop-filter: blur(4px);
 }
 
 td {
-  color: #e4e4e4;
+  color: #eaf3ff;
   padding: 0.8em 1em;
-  border-bottom: 1px solid #1e1e1e;
+  border-bottom: 1px solid rgba(100,150,255,0.1);
+  background: rgba(10,20,40,0.2);
 }
 
 tr:nth-child(even) td {
-  background: #181818;              /* 偶数行に薄いグレーの縞 */
+  background: rgba(30,50,80,0.25);
 }
 
 tr:hover td {
-  background: #202820;              /* ホバーでわずかに緑がかる */
+  background: rgba(70,100,140,0.3);
+  transition: background 0.2s ease;
 }
 
+/* ===== コード ===== */
 code {
-  background: #111;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  color: #80ffb4;
+  background: rgba(40,70,120,0.3);
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  color: #9cd3ff;
+  border: 1px solid rgba(120,180,255,0.2);
 }
 
+/* ===== 画像 ===== */
 img {
   display: block;
-  margin: 0 auto;
-  border-radius: 8px;
+  margin: 1.5em auto;
+  border-radius: 10px;
   max-width: 90%;
-  box-shadow: 0 0 15px rgba(100, 255, 160, 0.2);
+  box-shadow: 0 0 20px rgba(100, 160, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(120,180,255,0.15);
 }
 
+/* ===== 区切り線 ===== */
+hr {
+  border: none;
+  border-top: 1px solid rgba(100,150,255,0.2);
+  margin: 2em 0;
+}
+
+/* ===== リスト ===== */
 ul, ol {
   margin-left: 1.5em;
 }
 
-hr {
-  border: none;
-  border-top: 1px dashed #333;
-  margin: 2em 0;
-}
-
+/* ===== フッター ===== */
 footer {
   margin-top: 3em;
   font-size: 0.9em;
-  color: #888;
+  color: #99b8d8;
   text-align: center;
-  border-top: 1px solid #222;
+  border-top: 1px solid rgba(80,120,160,0.3);
   padding-top: 1em;
+}
+
+/* ===== セクション見出しアイコン風 ===== */
+h2::before {
+  content: "◈ ";
+  color: #69b0ff;
+  text-shadow: 0 0 6px rgba(100,180,255,0.7);
+}
+
+h3::before {
+  content: "▹ ";
+  color: #75bfff;
+}
+
+/* ===== スクロールバー（対応ブラウザ用） ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100,150,255,0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(130,190,255,0.5);
 }
