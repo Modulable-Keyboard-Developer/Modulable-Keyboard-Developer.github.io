@@ -5,7 +5,7 @@ layout: default
 
 <link rel="stylesheet" href="style.css">
 
-![top](top.png)
+![top](top.webp)
 
 # 🧠 MeKaBu ― Collective Modular Keyboard
 
