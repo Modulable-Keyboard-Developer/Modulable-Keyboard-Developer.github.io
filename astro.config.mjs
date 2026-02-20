@@ -4,11 +4,12 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	base: "/Modulable-Keyboard-Developer.github.io",
 	integrations: [
 		starlight({
 			title: 'MeKaBu Keyboard',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
-			sidebar: [
+			sidebar: [		
 				{
 					label: 'ビルドガイド',
 					autogenerate: { directory: 'guides' },
