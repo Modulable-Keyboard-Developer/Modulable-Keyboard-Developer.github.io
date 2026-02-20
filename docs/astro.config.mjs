@@ -16,6 +16,10 @@ export default defineConfig({
 				starlightThemeRapide(),
 			],
 			title: 'MeKaBu',
+			logo: {
+				src: './src/assets/logo.svg',
+				alt: 'MeKaBu',
+			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/te9no/zmk-config-MKB2' },
 				{ icon: 'x.com', label: 'X', href: 'https://x.com/teporz' },
@@ -28,6 +32,21 @@ export default defineConfig({
 			],
 			customCss: ['./src/styles/global.css'],
 			head: [
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'icon',
+						href: '/favicon.png',
+						type: 'image/png',
+					},
+				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'apple-touch-icon',
+						href: '/favicon.png',
+					},
+				},
 				{
 					tag: 'meta',
 					attrs: {
