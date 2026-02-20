@@ -17,7 +17,7 @@ export default defineConfig({
 			],
 			title: 'MeKaBu',
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/Modulable-Keyboard-Developer/Modulable-Keyboard-Developer.github.io' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/te9no/zmk-config-MKB2' },
 				{ icon: 'x.com', label: 'X', href: 'https://x.com/teporz' },
 			],
 			sidebar: [
@@ -32,7 +32,7 @@ export default defineConfig({
 					tag: 'meta',
 					attrs: {
 						property: 'og:image',
-						content: 'https://Modulable-Keyboard-Developer.github.io/og-image.jpg',
+						content: 'https://modulable-keyboard-developer.github.io/_astro/top.C9azglfg_1JTO10.webp',
 					},
 				},
 				{
@@ -53,7 +53,7 @@ export default defineConfig({
 					tag: 'meta',
 					attrs: {
 						name: 'twitter:image',
-						content: 'https://Modulable-Keyboard-Developer.github.io/og-image.jpg',
+						content: 'https://modulable-keyboard-developer.github.io/_astro/top.C9azglfg_1JTO10.webp',
 					},
 				},
 			],
