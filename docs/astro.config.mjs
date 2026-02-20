@@ -17,7 +17,7 @@ export default defineConfig({
 			],
 			title: 'MeKaBu',
 			logo: {
-				src: './src/assets/logo.svg',
+				src: './src/assets/favicon.png',
 				alt: 'MeKaBu',
 			},
 			social: [
