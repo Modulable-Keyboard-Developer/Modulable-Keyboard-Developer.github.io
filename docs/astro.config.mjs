@@ -1,6 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightThemeRapide from 'starlight-theme-rapide'
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,4 +21,8 @@ export default defineConfig({
 
 		}),
 	],
+	
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });
