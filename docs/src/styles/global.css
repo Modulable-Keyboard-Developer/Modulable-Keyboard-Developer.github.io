@@ -1,161 +1,126 @@
-/* ======== MeKaBu Acrylic Dark Blue Theme ======== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Noto+Sans+JP:wght@400;600&display=swap');
+/* ライトテーマ（背景白、アクセント黒） */
+:root {
+  --sl-color-accent: #000000;
+  /* アクセントを黒に */
+  --sl-color-accent-high: #1a1a1a;
+  --sl-color-accent-low: #4d4d4d;
 
-body {
-  font-family: "Inter", "Noto Sans JP", sans-serif;
-  background: radial-gradient(circle at top left, #0b1118 0%, #06090f 100%);
-  color: #dce4f5;
-  line-height: 1.8;
-  padding: 3em 10%;
-  backdrop-filter: blur(4px);
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ===== 見出し ===== */
-h1, h2, h3, h4 {
-  color: #8fd1ff;
-  text-shadow: 0 0 8px rgba(120,200,255,0.4);
-  border-bottom: 1px solid rgba(90,150,220,0.3);
-  padding-bottom: 0.3em;
+  /* 必要に応じて背景・テキストも黒系に */
+  --sl-color-text: #111111;
+  --sl-color-bg: #ffffff;
 }
 
-h1 {
-  font-size: 2.2em;
-  margin-top: 1em;
-}
-h2 {
-  font-size: 1.6em;
-  margin-top: 1.2em;
-}
-h3 {
-  font-size: 1.3em;
-  color: #a8d8ff;
+/* ダークテーマ（背景黒、アクセントも黒寄り） */
+:root[data-theme='dark'] {
+  --sl-color-accent: #ffffff;
+  /* 黒背景では白の方が視認性が良いので白アクセント推奨 */
+  --sl-color-accent-high: #e5e5e5;
+  --sl-color-accent-low: #8c8c8c;
+
+  --sl-color-text: #f5f5f5;
+  --sl-color-bg: #000000;
 }
 
-/* ===== リンク ===== */
-a {
-  color: #9cd3ff;
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(156,211,255,0.5);
-  transition: all 0.2s ease;
-}
-a:hover {
-  color: #d8f0ff;
-  border-bottom: 1px solid rgba(156,211,255,0.8);
-  text-shadow: 0 0 4px rgba(156,211,255,0.6);
+/* --- sl-link-button (primary) を黒テーマに --- */
+.sl-link-button.primary,
+.sl-link-button.is-primary {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: #ffffff !important;
+  /* 白文字 */
 }
 
-/* ===== 引用 ===== */
-blockquote {
-  border-left: 4px solid rgba(140,190,255,0.4);
-  padding-left: 1em;
-  color: #cbe3ff;
-  background: rgba(10,20,40,0.3);
-  border-radius: 6px;
-  backdrop-filter: blur(6px);
+/* not-content 用の variant も黒に */
+.sl-link-button.not-content.primary,
+.sl-link-button.not-content.is-primary {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: #ffffff !important;
 }
 
-/* ===== 表 (アクリル風) ===== */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1.5em 0;
-  background: rgba(20, 40, 70, 0.3);
-  border: 1px solid rgba(120,150,255,0.2);
-  border-radius: 8px;
-  overflow: hidden;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 20px rgba(80,120,255,0.05);
+/* ホバー時 */
+.sl-link-button.primary:hover,
+.sl-link-button.not-content.primary:hover {
+  background-color: #1a1a1a !important;
+  border-color: #1a1a1a !important;
 }
 
-th {
-  background: rgba(30,60,90,0.6);
-  color: #b0ddff;
-  font-weight: 600;
-  text-align: left;
-  padding: 0.8em 1em;
-  border-bottom: 1px solid rgba(100,150,255,0.15);
-  backdrop-filter: blur(4px);
+/* Primary buttons (dark) */
+:root[data-theme="dark"] .sl-link-button.primary,
+:root[data-theme="dark"] .sl-link-button.not-content.primary {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #000000 !important;
 }
 
-td {
-  color: #eaf3ff;
-  padding: 0.8em 1em;
-  border-bottom: 1px solid rgba(100,150,255,0.1);
-  background: rgba(10,20,40,0.2);
+:root[data-theme="dark"] .sl-link-button.primary:hover,
+:root[data-theme="dark"] .sl-link-button.not-content.primary:hover {
+  background-color: #e5e5e5 !important;
+  border-color: #e5e5e5 !important;
 }
 
-tr:nth-child(even) td {
-  background: rgba(30,50,80,0.25);
+.hero {
+  position: relative;
+  height: 60vh;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background: url("/hero.jpg") center/cover no-repeat;
+  background-color: #29383B;
+  color: #f5f5f5 !important;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-tr:hover td {
-  background: rgba(70,100,140,0.3);
-  transition: background 0.2s ease;
+.hero h1 {
+  font-size: 3rem;
+  color: #f5f5f5;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
 }
 
-/* ===== コード ===== */
-code {
-  background: rgba(40,70,120,0.3);
-  padding: 0.2em 0.5em;
-  border-radius: 5px;
-  color: #9cd3ff;
-  border: 1px solid rgba(120,180,255,0.2);
+.hero .tagline {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  opacity: 0.9;
+  margin-bottom: 1rem;
 }
 
-/* ===== 画像 ===== */
-img {
+@media screen and (max-width: 600px) {
+  .copy {
+    gap: 0;
+  }
+
+  .hero {
+    height: 50vh;
+    padding: 1.5rem;
+    background-position: calc(50% + 18px) center;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0;
+  }
+
+  .hero .tagline {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+}
+
+.hero .copy {
+  align-items: baseline;
+}
+
+.keyspec-badge {
   display: block;
-  margin: 1.5em auto;
-  border-radius: 10px;
-  max-width: 90%;
-  box-shadow: 0 0 20px rgba(100, 160, 255, 0.15);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(120,180,255,0.15);
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: 2rem auto;
 }
 
-/* ===== 区切り線 ===== */
-hr {
-  border: none;
-  border-top: 1px solid rgba(100,150,255,0.2);
-  margin: 2em 0;
-}
-
-/* ===== リスト ===== */
-ul, ol {
-  margin-left: 1.5em;
-}
-
-/* ===== フッター ===== */
-footer {
-  margin-top: 3em;
-  font-size: 0.9em;
-  color: #99b8d8;
-  text-align: center;
-  border-top: 1px solid rgba(80,120,160,0.3);
-  padding-top: 1em;
-}
-
-/* ===== セクション見出しアイコン風 ===== */
-h2::before {
-  content: "◈ ";
-  color: #69b0ff;
-  text-shadow: 0 0 6px rgba(100,180,255,0.7);
-}
-
-h3::before {
-  content: "▹ ";
-  color: #75bfff;
-}
-
-/* ===== スクロールバー（対応ブラウザ用） ===== */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(100,150,255,0.3);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(130,190,255,0.5);
+th,
+td {
+  padding: 0.5rem 1rem !important;
 }
