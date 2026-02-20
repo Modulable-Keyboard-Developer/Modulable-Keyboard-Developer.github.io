@@ -17,7 +17,7 @@ export default defineConfig({
 					autogenerate: { directory: 'guides' },
 				},
 			],
-			customCss: ['./src/styles/global.css'],
+			customCss: ['/src/styles/global.css'],
 
 		}),
 	],
