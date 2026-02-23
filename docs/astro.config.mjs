@@ -72,7 +72,7 @@ export default defineConfig({
 					tag: 'meta',
 					attrs: {
 						name: 'twitter:image',
-						content: 'https://modulable-keyboard-developer.github.io/_astro/top.C9azglfg_1JTO10.webp',
+						content: 'https://modulable-keyboard-developer.github.io/_astro/0c08e650-274d-4b1d-9777-ede79b1c5cc0.jpg',
 					},
 				},
 			],

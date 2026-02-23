@@ -4,7 +4,7 @@ title: MeKaBu ― Collective Modular Keyboard
 
 # MeKaBu 製品情報   
 
-![top.png](info/top.png)
+![top](info/0c08e650-274d-4b1d-9777-ede79b1c5cc0.jpg)
 
 # 概要
 
